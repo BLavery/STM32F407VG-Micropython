@@ -1,5 +1,5 @@
 # STM32F407VG-Micropython
-Notes on putting micropython on STM32F407VG bare board
+Notes on putting micropython on STM32F407VG bare board<img align="right" src="images/ss5.png">
 
 For the moment, cross-reference with this site may be of use:
 https://github.com/BLavery/STM32F407VG-Arduino
