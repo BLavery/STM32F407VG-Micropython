@@ -15,7 +15,7 @@ We can steal its micropython binary to use on our DIY board. Here is what I did:
  - using linux (debian mint),
  - which has dfu-util available,
  - with merely a USB connection,
- - using the standard latest pyboard v1 firmware image from here: http://micropython.org/download 
+ - using the standard latest firmware image (pyboard v1 or F4DISC) from here: http://micropython.org/download 
  
 ... we can put the PYBOARD micropython image on this board:
 
@@ -43,7 +43,7 @@ Save. Reset board. Lo, a led blinks.
 
 To get serial communication, we still use the USB connection. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
 
-A crtl-C and a couple of presses, and the REPL prompt of micropython is there. 
+A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython. 
 
 A new world beckons.
 
