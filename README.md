@@ -17,7 +17,7 @@ We can steal its micropython binary to use on our DIY board. Here is what I did:
  - with merely a USB connection,
  - using the standard latest pyboard v1 firmware image from here: http://micropython.org/download 
  
-... we can put a PYBOARD micropython image on this board:
+... we can put the PYBOARD micropython image on this board:
 
  - sudo dfu-util -a 0 -D pybv10-20181205-v1.9.4-712-gc6365ffb9.dfu      (your dfu file)
  
