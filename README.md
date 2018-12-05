@@ -7,7 +7,7 @@ For the moment, cross-referencing with the following site may be of help
 in understanding this board:
 https://github.com/BLavery/STM32F407VG-Arduino
 
-The DIY board MCU is '407VG. This is the same MCU as on the STM32 F4 Discovery board, which has a pyboard derivative micropython build.
+The DIY board MCU is '407VG. This is the same MCU as on the STM32 F4 Discovery board, which has a micropython build.
 
 We can steal its micropython binary to use on our DIY board. Here is what I did:
 
