@@ -20,7 +20,8 @@ We can steal its micropython binary to use on our board. Here is what I did:
  
 Swap the boot jumper from boot1 to boot to re-enable run mode and reset. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  Use any editor to put this into main.py:
 
-```import machine, time
+```
+import machine, time
 time.sleep(3)
 PE0 = machine.Pin.cpu.E0
 led=machine.Pin(PE0, machine.Pin.OUT)
@@ -28,7 +29,8 @@ while 1:
   led.high()
   time.sleep(1)
   led.low()
-  time.sleep(1)```
+  time.sleep(1)
+```
 
 Save. Reset board. Lo, a led blinks. 
 
