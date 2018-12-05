@@ -43,7 +43,7 @@ Save. Reset board. Lo, a led blinks.
 
 To get serial communication, we still use the USB connection. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
 
-A couple of presses, and the REPL prompt of micropython is there. 
+A crtl-C and a couple of presses, and the REPL prompt of micropython is there. 
 
 A new world beckons.
 
