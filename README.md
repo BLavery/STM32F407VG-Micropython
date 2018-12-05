@@ -14,7 +14,7 @@ We can steal its micropython binary to use on our DIY board. Here is what I did:
  - using linux (debian mint),
  - which has dfu-util available,
  - with merely a USB connection,
- - using the standard latest firmware image from here: http://micropython.org/download 
+ - using the standard latest pyboard v1 firmware image from here: http://micropython.org/download 
  
 ... we can put a PYBOARD micropython image on this board:
 
