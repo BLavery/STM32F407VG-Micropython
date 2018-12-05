@@ -7,9 +7,9 @@ For the moment, cross-referencing with the following site may be of help
 in understanding this board:
 https://github.com/BLavery/STM32F407VG-Arduino
 
-The DIY board MCU is '407VG. This is the same MCU as on the STM32 F4 Discovery board, which has a micropython build.
+The DIY board MCU is '407VG. This is the same MCU as on the STM32 F4 Discovery board, which has a micropython firmware build.
 
-We can steal its micropython binary to use on our DIY board. Here is what I did:
+We can load that micropython binary on our DIY board. Here is what I did:
 
  - In boot mode (reset with jumper on boot1),
  - using linux (debian mint),
@@ -19,7 +19,7 @@ We can steal its micropython binary to use on our DIY board. Here is what I did:
  
 ... we can put the PYBOARD micropython image on this board:
 
- - sudo dfu-util -a 0 -D pybv10-20181205-v1.9.4-712-gc6365ffb9.dfu      (your dfu file)
+ - sudo dfu-util -a 0 -D pybv10-20181205-v1.9.4-712-gc6365ffb9.dfu      (our dfu file)
  
 THAT'S SO EASY.
 
