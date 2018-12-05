@@ -18,7 +18,7 @@ We can steal its micropython binary to use on our board. Here is what I did:
 
  - sudo dfu-util -a 0 -D pybv10-20181205-v1.9.4-712-gc6365ffb9.dfu      (your dfu file)
  
-Swap the boot jumper from boot1 to boot to re-enable run mode and reset. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  Use any editor to put this into main.py:
+Swap the boot jumper from boot1 to boot to re-enable run mode and reset. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  The DIY board has a LED on PE0. Use any editor to put this into main.py:
 
 ```
 import machine, time
