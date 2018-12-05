@@ -29,9 +29,7 @@ Our DIY board has a LED on PE0. Use any editor to put this into main.py:
 
 ```
 import machine, time
-time.sleep(3)
-PE0 = machine.Pin.cpu.E0
-led=machine.Pin(PE0, machine.Pin.OUT)
+led=machine.Pin("PE0", machine.Pin.OUT)
 while 1:
   led.high()
   time.sleep(1)
