@@ -23,7 +23,9 @@ We can steal its micropython binary to use on our DIY board. Here is what I did:
  
 THAT'S SO EASY.
 
-Swap the boot jumper from boot1 to boot0 and press reset to re-enable run mode. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  Our DIY board has a LED on PE0. Use any editor to put this into main.py:
+Swap the boot jumper from boot1 to boot0 and press reset to re-enable run mode. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  
+
+Our DIY board has a LED on PE0. Use any editor to put this into main.py:
 
 ```
 import machine, time
