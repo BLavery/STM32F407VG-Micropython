@@ -3,7 +3,8 @@ Notes on putting micropython on STM32F407VG $10 bare board<img align="right" src
 
 A pyboard on steroids? Well, it has more GPIO pins, anyway.
 
-For the moment, cross-referencing with this site may be of use in understanding this board:
+For the moment, cross-referencing with the following site may be of help
+in understanding this board:
 https://github.com/BLavery/STM32F407VG-Arduino
 
 The DIY board MCU is '407VG. This is similar enough to '405RG used on the PyBoard. http://docs.micropython.org/en/v1.9.2/pyboard/pyboard/general.html
