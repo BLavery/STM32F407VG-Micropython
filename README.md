@@ -47,7 +47,7 @@ while 1:
 
 ```
 
-Save. Reset board. Lo, a led blinks. 
+Save. Reset board. Lo, the led blinks. 
 
 Our same uart adapter gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
 
