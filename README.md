@@ -34,6 +34,10 @@ Pin("PA9", Pin.OUT).high()
 ```
 This will hold PA9 high. Save. Unmount the PYBFLASH drive. Remove the temporary jumper. Reset. The PYBFLASH drive should return. Glitch finished.
 
+USB now gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
+
+A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython. 
+
 Our DIY board has a LED on PE0. Use any editor to upgrade main.py to this:
 
 ```
@@ -48,10 +52,6 @@ while 1:
 ```
 
 Save. Reset board. Lo, the led blinks. 
-
-USB now gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
-
-A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython. 
 
 A new world beckons.
 
