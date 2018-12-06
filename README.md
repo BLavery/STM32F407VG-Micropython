@@ -47,3 +47,6 @@ A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython.
 
 A new world beckons.
 
+---
+
+Mystery? The PYFLASH drive and the serial REPL above work when BOTH a USB cable and a uart adapter are plugged in. But not when only one is used. What gives? More to investigate!
