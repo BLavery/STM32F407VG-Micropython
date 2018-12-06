@@ -32,7 +32,7 @@ Solution: temporarily connect a jumper wire from +3V to PA9. Reset.  A new "driv
 from machine import Pin
 Pin("PA9", Pin.OUT).high()
 ```
-This will hold PA9 high. Save. Unmount the PYBFLASH drive. Remove the temporary jumper. Reset. The PYBFLASH drive should return, without needing the jumper wire. Glitch finished.
+This will hold PA9 high. Save. Unmount the PYBFLASH drive. Remove the temporary jumper. Reset. The PYBFLASH drive should return, without needing the jumper wire. Glitch finished. Remember not to use PA9 for other things in future.
 
 USB now gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
 
