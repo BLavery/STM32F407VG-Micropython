@@ -25,18 +25,26 @@ THAT'S SO EASY.
 
 Swap the boot jumper from boot1 to boot0 and press reset to re-enable run mode. 
 
-At this stage, add a 3V uart adapter (I use a CP2102) at the TX/RX pins (PA9/PA10). 3-wire, no vcc. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  
+Here we have a slight glitch. The "real" F4 DISC board has a voltage sensor on PA9 to detect that the USB is plugged in. Our DIY board doesn't have that, but the code we installed thinks we have a real F4 DISC. We can fudge a HIGH  voltage on PA9 if we can get these 2 lines in file main.py on the python. But we can't get at that file until the USB starts.
 
-Our DIY board has a LED on PE0. Use any editor to put this into main.py:
+Solution: temporarily connect a jumper wire from +3V to PA9. Reset.  A new "drive" appears on the filemanager, "PYBFLASH", with empty boot.py and main.py already present.  Use any editor to add these 2 lines to main.py:
+```
+from machine import Pin
+Pin("PA9", Pin.OUT).high()
+```
+Save. Unmount the BYBFLASH drive. Remove the temporary jumper. Reset. The PYBFLASH drive should return. Glitch finished.
+
+Our DIY board has a LED on PE0. Use any editor to upgrade main.py to this:
 
 ```
-import machine, time
-led=machine.Pin("PE0", machine.Pin.OUT)
+from time import sleep
+from machine import Pin
+Pin("PA9", Pin.OUT).high()
+led=Pin("PE0", Pin.OUT)
 while 1:
-  led.high()
-  time.sleep(1)
-  led.low()
-  time.sleep(1)
+  led.value(1-led.value())
+  sleep(1)
+
 ```
 
 Save. Reset board. Lo, a led blinks. 
@@ -49,4 +57,4 @@ A new world beckons.
 
 ---
 
-Mystery? The PYFLASH drive and the serial REPL above work when BOTH a USB cable and a uart adapter are plugged in. But not when only one is used. What gives? More to investigate!
+
