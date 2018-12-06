@@ -23,7 +23,9 @@ We can load that micropython binary on our DIY board. Here is what I did:
  
 THAT'S SO EASY.
 
-Swap the boot jumper from boot1 to boot0 and press reset to re-enable run mode. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  
+Swap the boot jumper from boot1 to boot0 and press reset to re-enable run mode. 
+
+At this stage, add a 3V uart adapter (I use a CP2102) at the TX/RX pins (PA9/PA10). 3-wire, no vcc. A new "drive" appears on my filemanager, "PYBFLASH", with empty boot.py and main.py already present.  
 
 Our DIY board has a LED on PE0. Use any editor to put this into main.py:
 
@@ -39,7 +41,7 @@ while 1:
 
 Save. Reset board. Lo, a led blinks. 
 
-To get serial communication, we still use the USB connection. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
+Our same uart adapter gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
 
 A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython. 
 
