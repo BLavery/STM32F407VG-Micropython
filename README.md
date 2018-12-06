@@ -32,7 +32,7 @@ Solution: temporarily connect a jumper wire from +3V to PA9. Reset.  A new "driv
 from machine import Pin
 Pin("PA9", Pin.OUT).high()
 ```
-This will hold PA9 high. Save. Unmount the BYBFLASH drive. Remove the temporary jumper. Reset. The PYBFLASH drive should return. Glitch finished.
+This will hold PA9 high. Save. Unmount the PYBFLASH drive. Remove the temporary jumper. Reset. The PYBFLASH drive should return. Glitch finished.
 
 Our DIY board has a LED on PE0. Use any editor to upgrade main.py to this:
 
