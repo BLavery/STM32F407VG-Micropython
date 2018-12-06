@@ -1,4 +1,4 @@
-# STM32F407VG-Micropython
+# STM32F407VG & Micropython
 Notes on putting micropython on STM32F407VG $10 bare board<img align="right" src="images/ss5.png">
 
 A pyboard on steroids? Well, it has more GPIO pins, anyway.
