@@ -3,7 +3,7 @@ Notes on putting micropython on __STM32F407VG $10 bare board__<img align="right"
 
 A pyboard on steroids? Well, it has more GPIO pins, anyway.
 
-For the moment, cross-referencing with the following site may be of help
+For the moment, a quick look at the following site may be of help
 in understanding this board:
 https://github.com/BLavery/STM32F407VG-Arduino
 and especially on how to set boot jumper and reset into dfu (bootloader) mode.
