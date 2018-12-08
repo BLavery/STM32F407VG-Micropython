@@ -6,6 +6,7 @@ A pyboard on steroids? Well, it has more GPIO pins, anyway.
 For the moment, cross-referencing with the following site may be of help
 in understanding this board:
 https://github.com/BLavery/STM32F407VG-Arduino
+and especially on how to set boot jumper and reset into dfu (bootloader) mode.
 
 The DIY board MCU is '407VG. This is the same MCU as on the STM32 F4 Discovery board, which has a micropython firmware build.
 
@@ -17,7 +18,7 @@ We can load that micropython binary on our DIY board. Here is what I did:
  - with merely a USB connection,
  - using the standard latest firmware image (STM32F4 Discovery) from here: http://micropython.org/download 
  
-... we can put the PYBOARD micropython image on this board:
+... we can put the PYBOARD micropython image on this board (bootloader mode):
 
  - sudo dfu-util -a 0 -D STM32F4DISC-20181207-v1.9.4-725-gd690c2e14.dfu      (our dfu file)
  
