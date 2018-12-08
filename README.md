@@ -55,7 +55,7 @@ while 1:
 
 ```
 
-Save. Reset board. Lo, the led blinks. 
+Save file. Unmount flash. Reset board. Lo, the led blinks. 
 
 A new world beckons.
 
