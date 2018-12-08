@@ -18,7 +18,7 @@ We can load that micropython binary on our DIY board. Here is what I did:
  - with merely a USB connection,
  - using the standard latest firmware image (STM32F4 Discovery) from here: http://micropython.org/download 
  
-... we can put the PYBOARD micropython image on this board (bootloader mode):
+... we can put the PYBOARD micropython image on this board (bootloader mode, jumper on boot1, press reset):
 
  - sudo dfu-util -a 0 -D STM32F4DISC-20181207-v1.9.4-725-gd690c2e14.dfu      (our dfu file)
  
