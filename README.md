@@ -55,6 +55,8 @@ Save. Reset board. Lo, the led blinks.
 
 A new world beckons.
 
+http://docs.micropython.org
+
 ---
 
 So we now have the STM32F4 Discovery board micropython running on our DIY board.
@@ -64,21 +66,21 @@ firmware adjustments for:
  - Not 4 LEDs, just one, on a different pin. Active low, not high.
  - The USR button on different pin. Active low, not high.
  - The pins for UART1 no longer conflicted by the "USB plugged in" sensing
- - No SD flash fitted to board
+ - No SD flash slot fitted to board
  
-So, it's not too difficult to recompile the micropython firmware to exactly match our DIY board.
+It's not too difficult to recompile the micropython firmware to exactly match our DIY board.
 I did it on my linux PC, set up as per the file compile-micropython.doc. 
 I added the STM32F407 folder from here into my .../micropython/ports/stm32/boards/ folder,
-alongside the other board variants. The new variant board is just a clone of STM32F4DISC, with tweaks.
+alongside the other board variants. The new variant board is just a clone of STM32F4DISC, with config tweaks to only 2 files.
 
 Positioning my terminal into .../micropython/ports/stm32 folder:
 ```
     make STM32F407
 ```
-In a few minutes I have new firmware called "firmware.dfu" in a newly-created folder .../micropython/ports/stm32/build-STM32F407. To upload, change directory to that, and, as before,
+In a few minutes I have fresh new firmware called "firmware.dfu" in a newly-created folder .../micropython/ports/stm32/build-STM32F407. To upload, change directory to that, and, as before,
 ```
    sudo dfu-util -a 0 -D firmware.dfu
 ```
 
 But you shouldn't need to recompile. I have put a copy here for your download. Still faithfully just called firmware.dfu.
-It should work cleanly. The USB starts automatically now. Even the Safe Mode and Flash Volume Reset work. (You get single/double/triple LED flashes, not 3 colours.)  See http://docs.micropython.org/en/latest/pyboard/tutorial/reset.html
+It should work cleanly. The USB starts automatically now, without the glitch-fixer above. Even the Safe Mode and Flash Volume Reset work. (You get single/double/triple LED flashes, not 3 colours.)  See http://docs.micropython.org/en/latest/pyboard/tutorial/reset.html
