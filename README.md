@@ -19,7 +19,7 @@ We can load that micropython binary on our DIY board. Here is what I did:
  
 ... we can put the PYBOARD micropython image on this board:
 
- - sudo dfu-util -a 0 -D pybv10-20181205-v1.9.4-712-gc6365ffb9.dfu      (our dfu file)
+ - sudo dfu-util -a 0 -D STM32F4DISC-20181207-v1.9.4-725-gd690c2e14.dfu      (our dfu file)
  
 THAT'S SO EASY.
 
@@ -57,4 +57,28 @@ A new world beckons.
 
 ---
 
+So we now have the STM32F4 Discovery board micropython running on our DIY board.
+There are a few hardware differences (read: things NOT fitted on our DIY board) that would be good to have some
+firmware adjustments for:
+ - No sensing of "USB plugged in" voltage (We had a workaround above)
+ - Not 4 LEDs, just one, on a different pin. Active low, not high.
+ - The USR button on different pin. Active low, not high.
+ - The pins for UART1 no longer conflicted by the "USB plugged in" sensing
+ - No SD flash fitted to board
+ 
+So, it's not too difficult to recompile the micropython firmware to exactly match our DIY board.
+I did it on my linux PC, set up as per the file compile-micropython.doc. 
+I added the STM32F407 folder from here into my .../micropython/ports/stm32/boards/ folder,
+alongside the other board variants. The new variant board is just a clone of STM32F4DISC, with tweaks.
 
+Positioning my terminal into .../micropython/ports/stm32 folder:
+```
+    make STM32F407
+```
+In a few minutes I have new firmware called "firmware.dfu" in my folder. As before,
+```
+   sudo dfu-util -a 0 -D firmware.dfu
+```
+
+But you shouldn't need to recompile. I have put a copy here for your download. Still faithfully just called firmware.dfu.
+It should work cleanly. The USB starts automatically now. The Safe Mode and Flash vulume reset work. (You get single/double/triple LED flashes, not 3 colours.)  See 
