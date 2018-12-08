@@ -81,4 +81,4 @@ In a few minutes I have new firmware called "firmware.dfu" in a newly-created fo
 ```
 
 But you shouldn't need to recompile. I have put a copy here for your download. Still faithfully just called firmware.dfu.
-It should work cleanly. The USB starts automatically now. The Safe Mode and Flash vulume reset work. (You get single/double/triple LED flashes, not 3 colours.)  See 
+It should work cleanly. The USB starts automatically now. Even the Safe Mode and Flash Volume Reset work. (You get single/double/triple LED flashes, not 3 colours.)  See http://docs.micropython.org/en/latest/pyboard/tutorial/reset.html
