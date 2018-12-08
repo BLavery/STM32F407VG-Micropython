@@ -75,7 +75,7 @@ Positioning my terminal into .../micropython/ports/stm32 folder:
 ```
     make STM32F407
 ```
-In a few minutes I have new firmware called "firmware.dfu" in my folder. As before,
+In a few minutes I have new firmware called "firmware.dfu" in a newly-created folder .../micropython/ports/stm32/build-STM32F407. To upload, change directory to that, and, as before,
 ```
    sudo dfu-util -a 0 -D firmware.dfu
 ```
