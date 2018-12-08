@@ -24,7 +24,7 @@ sudo dfu-util -a 0 -D STM32F4DISC-20181207-v1.9.4-725-gd690c2e14.dfu      (our d
 ``` 
 THAT'S SO EASY.
 
-*Linux has dfu-util easily available. If you run Windows, this guide should help to do the DFU upload:
+*Linux has dfu-util easily available. If you run Windows, this guide should help to do the DFU upload:  
 http://micropython.org/resources/Micro-Python-Windows-setup.pdf*
 
 Swap the boot jumper from boot1 to boot0 and press reset to re-enable run mode. 
