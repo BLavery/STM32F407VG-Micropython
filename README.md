@@ -55,7 +55,7 @@ Save. Reset board. Lo, the led blinks.
 
 A new world beckons.
 
-http://docs.micropython.org
+http://docs.micropython.org  (.. and follow the pyboard specifics, not esp8266 or wipy. Because pyboard also uses STM32F407!)
 
 ---
 
