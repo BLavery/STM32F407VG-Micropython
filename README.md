@@ -82,5 +82,5 @@ In a few minutes I have fresh new firmware called "firmware.dfu" in a newly-crea
    sudo dfu-util -a 0 -D firmware.dfu
 ```
 
-But you shouldn't need to recompile. I have put a copy here for your download. Still faithfully just called firmware.dfu.
+But you shouldn't need yourself to recompile. I have put a copy here for your download. Still faithfully just called firmware.dfu.
 It should work cleanly. The USB starts automatically now, without the glitch-fixer above. Even the Safe Mode and Flash Volume Reset work. (You get single/double/triple LED flashes, not 3 colours.)  See http://docs.micropython.org/en/latest/pyboard/tutorial/reset.html
