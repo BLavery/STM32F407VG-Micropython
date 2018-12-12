@@ -46,6 +46,9 @@ KeyboardInterrupt:
 MicroPython v1.9.4-725-gd690c2e-dirty on 2018-12-12; F4DIY with STM32F407VG
 Type "help()" for more information.
 >>> 
+
+PYB: sync filesystems
+PYB: soft reboot
 ```
 
 Our DIY board has a LED on PE0. Use any editor to upgrade main.py to this:
