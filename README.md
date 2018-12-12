@@ -88,3 +88,9 @@ In a few minutes I have fresh new firmware called "firmware.dfu" in a newly-crea
 It should work cleanly. The USB starts automatically now, without the PA9 glitch-fixer above. Even the Safe Mode and Flash Volume Reset work. (We get single/double/triple LED flashes, not 3 colours.)  See http://docs.micropython.org/en/latest/pyboard/tutorial/reset.html
 
  __And you shouldn't need to recompile. I have put a compiled firmware here__ for your download. Still faithfully just called firmware.dfu.
+
+---
+
+The flash volume that stores boot.py, main.py and you own project files is about 92K (112K less overheads). Putting some python files in directory .../ports/stm32/modules can "freeze" that code into your micropython firmware, and free up space otherwise used in your flash drive. That is, if you are willing to be reompiling your own firmware.dfu file.
+
+Otherwise, I tried with SPI to add a SD card and external flash chip 25Q16, using the drivers micropython offers here:  .../micropython/drivers. Both attempts failed, and after googling around, I suspect this area (adding external FAT volumes) is broken and has been for a while. So make do with the 92K filespace you have.
