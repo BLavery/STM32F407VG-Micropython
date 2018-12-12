@@ -31,7 +31,7 @@ Swap the boot jumper from boot1 to boot0 and press reset to re-enable run mode.
 
 Here we have a slight glitch. The "real" F4 DISC board has a voltage sensor on PA9 to detect that the USB is plugged in. Our DIY board doesn't have that, but the code we installed thinks we have a real F4 DISC, and USB won't start. We can fudge a HIGH  voltage on PA9 if we can get a fix into file main.py on the python. But we can't get at that file until the USB starts.
 
-Solution: temporarily connect a jumper wire from +3V to PA9. Reset.  A new "drive" appears on the filemanager, "PYBFLASH", with empty boot.py and main.py already present.  Use any editor to add these 2 lines to main.py:
+Solution: temporarily connect a jumper wire from +3V to PA9. Reset.  On your computer, a new "drive" appears on the filemanager, "PYBFLASH", with empty boot.py and main.py already present.  Use any editor to add these 2 lines to main.py:
 ```
 from machine import Pin
 Pin("PA9", Pin.OUT).high()
