@@ -43,7 +43,7 @@ USB now gives us a serial connection as well. Run a serial terminal utility. (I 
 A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython. 
 ```
 KeyboardInterrupt: 
-MicroPython v1.9.4-725-gd690c2e-dirty on 2018-12-12; F4DIY with STM32F407VG
+MicroPython v1.9.4-725; F4DISC with STM32F407VG
 Type "help()" for more information.
 >>> 
 
