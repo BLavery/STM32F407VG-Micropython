@@ -38,9 +38,9 @@ Pin("PA9", Pin.OUT).high()
 ```
 This will hold PA9 high. Save. __Unmount/eject/remove the PYBFLASH drive.__ (Get used to doing this!) Remove the temporary jumper. Reset. The PYBFLASH drive should return, without needing the jumper wire. Glitch finished. Remember not to use PA9 for other things (eg UART1) in future.
 
-USB now gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
+USB now gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent. Baudrate seens to be self-sensing, I think.
 
-A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython. 
+A crtl-C and ctrl-D get you in and out of the REPL (interpreter) prompt of micropython. 
 ```
 KeyboardInterrupt: 
 MicroPython v1.9.4-725; F4DISC with STM32F407VG
