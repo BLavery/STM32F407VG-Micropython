@@ -41,6 +41,12 @@ This will hold PA9 high. Save. __Unmount/eject/remove the PYBFLASH drive.__ (Get
 USB now gives us a serial connection as well. Run a serial terminal utility. (I use gtkterm). On linux my port name is /dev/ttyACM0 or similar. I'm sure you Win or Mac folk can work out your equivalent.
 
 A crtl-C and ctrl-D get you in and out of the REPL prompt of micropython. 
+```
+KeyboardInterrupt: 
+MicroPython v1.9.4-725-gd690c2e-dirty on 2018-12-12; F4DIY with STM32F407VG
+Type "help()" for more information.
+>>> 
+```
 
 Our DIY board has a LED on PE0. Use any editor to upgrade main.py to this:
 
