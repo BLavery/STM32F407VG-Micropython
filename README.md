@@ -100,6 +100,6 @@ It should work cleanly. The USB starts automatically now, without the PA9 glitch
 
 ---
 
-The flash volume that stores boot.py, main.py and you own project files is about 92K (112K less overheads). Putting some python files in directory .../ports/stm32/modules can "freeze" that code into your micropython firmware, and free up space otherwise used in your flash drive. That is, if you are willing to be recompiling your own firmware.dfu file, which I just suggested you shouldn't need to do!
+The flash volume that stores boot.py, main.py and you own project files is about 92K (112K less overheads). It could be a limitation if your project grows. If you are willing to be recompiling your own firmware.dfu file, which I just suggested you shouldn't need to do, then you can save some space. You can "freeze" some of your library files. But search elsewhere on just how to do that.
 
-Otherwise, I tried with SPI connections to add a SD card and an external 2MB flash chip, using the drivers micropython offers here:  .../micropython/drivers. Both attempts failed, and after googling around, I suspect this area (adding external FAT volumes) is broken in micropython and has been for a while. So make do with the internal 92K filespace you have.
+Otherwise, I also tried with SPI connections to add a SD card and an external 2MB flash chip, using the drivers micropython offers here:  .../micropython/drivers. Both attempts failed, and after googling around, I suspect this area (adding external FAT volumes) is broken in micropython and has been for a while. So make do with the internal 92K filespace you have.
