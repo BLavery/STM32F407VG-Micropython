@@ -8,7 +8,7 @@ in understanding this board:
 https://github.com/BLavery/STM32F407VG-Arduino
 and especially on how to set boot jumper and reset into dfu (bootloader) mode.
 
-The DIY board MCU is '407VG. This is the same MCU as on the STM32 F4 Discovery board, which has a micropython firmware build.
+The DIY board MCU is '407VG. This is the same MCU as on the STM32 F4 Discovery board, which already has a micropython firmware build.
 
 We can load that micropython binary on our DIY board. Here is what I did:
 
